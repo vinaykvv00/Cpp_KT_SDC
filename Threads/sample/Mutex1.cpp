@@ -4,12 +4,12 @@
 
 using namespace std;
 int counter = 0;
-mutex mtx; // Mutex for protecting counter
+mutex mtx; 
 
 void increment() {
     for(int i = 0; i < 10000; ++i) {
-        lock_guard<mutex> lock(mtx); // Lock mutex
-        ++counter; // Safe now!
+        lock_guard<mutex> lock(mtx);
+        ++counter; 
     }
 }
 

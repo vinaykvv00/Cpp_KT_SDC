@@ -13,9 +13,9 @@ int main() {
     };
 
     thread t1(task);
-    thread t2(printHello); // Create a thread that runs the printHello function
-    t1.join(); // Wait for the thread to finish
-    t2.join(); // Wait for the printHello thread to finish
+    thread t2(printHello); 
+    t1.detach(); 
+    t2.join();
 
     cout << "Thread has finished execution." <<endl;
     return 0;
